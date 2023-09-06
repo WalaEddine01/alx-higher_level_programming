@@ -4,3 +4,5 @@ def print_last_digit(number):
     if (number.isnumeric() is True or number[0] == "-"):
         print(number[-1], end="")
         return (number[-1])
+    else:
+        return ("Traceback (most recent call last):")
