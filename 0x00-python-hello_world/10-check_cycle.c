@@ -1,4 +1,4 @@
-#include "main.h"
+#include "list.h"
 /**
  * check_cycle - checks if a singly linked list has a cycle in it
  * @list: pointer to head of list
