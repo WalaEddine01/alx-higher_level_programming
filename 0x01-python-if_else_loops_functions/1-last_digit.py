@@ -9,8 +9,8 @@ elif number[-1] > "5":
     print(f"Last digit of {number} is {number[-1]} and is greater than 5")
 elif number[-1] == "0":
     print(f"Last digit of {number} is {number[-1]} and is 0")
-else:
+elif number[-1] < "5" and number[-1] != "0":
     print(f"Last digit of {number} is {number[-1]} and is less than 6 \
 and not 0")
-pass
-print("TypeError")
+else:
+    print("Typeerror")
