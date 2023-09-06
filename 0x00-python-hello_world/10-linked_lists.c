@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
  * free_listint - frees a listint_t list
  * @head: pointer to list to be freed
