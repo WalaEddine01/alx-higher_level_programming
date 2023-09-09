@@ -33,8 +33,8 @@ int is_palindrome(listint_t **head)
 		{
 			list1 = NULL;
 			list2 = NULL;
-			return (0);
 		}
+			return (0);
 	}
 	list1 = NULL;
 	list2 = NULL;
