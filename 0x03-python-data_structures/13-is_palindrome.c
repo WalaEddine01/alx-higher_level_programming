@@ -28,6 +28,5 @@ int is_palindrome(listint_t **head)
 		if (list1->n != list2->n)
 			return (0);
 	}
-
 	return (1);
 }
