@@ -36,7 +36,5 @@ int is_palindrome(listint_t **head)
 			return (0);
 		}
 	}
-	free_listint(list1);
-	free_listint(list2);
 	return (1);
 }
