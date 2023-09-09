@@ -23,7 +23,7 @@ int check_loop(listint_t *head)
 			list1 = list1->next;
 		for (j = 0; j < i; j++)
 			list2 = list2->next;
-		if (i == 10)
+		if (i == 9)
 			return (0);
 	}
 	return (1);
