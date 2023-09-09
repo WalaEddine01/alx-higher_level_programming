@@ -6,11 +6,15 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *list1, *list2;
+	listint_t *list1 = NULL, *list2 = NULL;
 	int i, j, n = 0;
 
-	if (head == NULL && (*head)->next == NULL)
-		return (1);
+	if (head == NULL && (*head)->next == NULL && (*head) == NULL)
+		{
+			free_listint(list1);
+			free_listint(list2);
+			return (1);
+		}
 	list1 = *head;
 	while (list1)
 	{
@@ -26,7 +30,13 @@ int is_palindrome(listint_t **head)
 		for (j = 0; j < i; j++)
 			list2 = list2->next;
 		if (list1->n != list2->n)
+		{
+			free_listint(list1);
+			free_listint(list2);
+		}
 			return (0);
 	}
+	free_listint(list1);
+	free_listint(list2);
 	return (1);
 }
