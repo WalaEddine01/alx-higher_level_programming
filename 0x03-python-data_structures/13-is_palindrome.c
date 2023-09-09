@@ -9,7 +9,7 @@ int is_palindrome(listint_t **head)
 	listint_t *list1 = NULL, *list2 = NULL;
 	int i, j, n = 0;
 
-	if (head == NULL && (*head)->next == NULL && (*head) == NULL)
+	if (head == NULL && (*head)->next == NULL && *head == NULL)
 	{
 		free_listint(list1);
 		free_listint(list2);
