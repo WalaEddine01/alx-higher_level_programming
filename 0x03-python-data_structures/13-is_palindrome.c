@@ -30,7 +30,9 @@ int is_palindrome(listint_t **head)
 		for (j = 0; j < i; j++)
 			list2 = list2->next;
 		if (list1->n != list2->n)
-		return (0);
+		{
+		}
+			return (0);
 	}
 	return (1);
 }
