@@ -28,5 +28,7 @@ int is_palindrome(listint_t **head)
 		if (list1->n != list2->n)
 			return (0);
 	}
+	free_listint(list1);
+	free_listint(list2);
 	return (1);
 }
