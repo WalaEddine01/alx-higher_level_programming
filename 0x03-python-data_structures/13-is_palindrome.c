@@ -27,7 +27,9 @@ int is_palindrome(listint_t **head)
 			list1 = list1->next;
 		for (j = 0; j < i; j++)
 			list2 = list2->next;
-		if (list1->n != list2->n)
+		if (list1->n == list2->n)
+			continue;
+		else
 			return (0);
 	}
 	return (1);
