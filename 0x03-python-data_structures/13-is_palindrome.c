@@ -6,27 +6,26 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *list1 = NULL, *list2 = NULL;
-	int i, j, n = 0;
+	listint_t *list1 = *head, *list2 = *head, *prev = *head, *next = *head;
 
 	if (head == NULL && (*head)->next == NULL && *head == NULL)
 		return (1);
-	list1 = *head;
-	while (list1)
+	while (list2 != NULL && list2->next != NULL)
 	{
-		n++;
-		list1 = list1->next;
+		list2 = list2->next->next;
+		next = list1->next;
+		list1->next = prev;
+		prev = list1;
+		list1 = next;
 	}
-	for (i = 0; i < n; i++)
+	if (list2 != NULL)
+		list1 = list1->next;
+	while (prev != NULL && list1 != NULL)
 	{
-		list1 = *head;
-		list2 = *head;
-		for (j = 0; j < i; j++)
-			list2 = list2->next;
-		for (j = 0; j < n - i - 1; j++)
-			list1 = list1->next;
-		if (list1->n != list2->n)
+		if (prev->n != list1->n)
 			return (0);
+		prev = prev->next;
+		list1 = list1->next;
 	}
 	return (1);
 }
