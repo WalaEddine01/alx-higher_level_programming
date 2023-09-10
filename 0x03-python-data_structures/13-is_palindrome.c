@@ -25,7 +25,8 @@ int is_palindrome(listint_t **head)
 			list2 = list2->next;
 		if (list1->n != list2->n)
 			return (0);
-		list1 = list1->next;
+		else
+			list1 = list1->next;
 	}
 	return (1);
 }
