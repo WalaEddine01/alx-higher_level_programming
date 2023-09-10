@@ -17,7 +17,7 @@ int is_palindrome(listint_t **head)
 		n++;
 		list1 = list1->next;
 	}
-	for (i = 0; i < n / 2; i++)
+	for (i = 0; i < n; i++)
 	{
 		list1 = *head;
 		list2 = *head;
