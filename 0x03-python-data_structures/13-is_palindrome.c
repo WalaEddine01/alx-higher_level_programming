@@ -24,9 +24,12 @@ int is_palindrome(listint_t **head)
 		for (j = 0; j < i; j++)
 			list2 = list2->next;
 		if (list1->n != list2->n)
+		{
+			list1 = NULL;
+			list2 = NULL;
 			return (0);
-		else
-			list1 = list1->next;
+		}
+		list1 = list1->next;	
 	}
 	return (1);
 }
