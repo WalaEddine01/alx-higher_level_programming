@@ -17,7 +17,6 @@ int is_palindrome(listint_t **head)
 		n++;
 		list1 = list1->next;
 	}
-	list1 = *head;
 	for (i = 0; i < n / 2; i++)
 	{
 		list1 = *head;
@@ -26,7 +25,7 @@ int is_palindrome(listint_t **head)
 			list2 = list2->next;
 		for (j = 0; j < n - i - 1; j++)
 			list1 = list1->next;
-		if (list1->n != list2->n || i <= 8)
+		if (list1->n != list2->n)
 			return (0);
 	}
 	return (1);
