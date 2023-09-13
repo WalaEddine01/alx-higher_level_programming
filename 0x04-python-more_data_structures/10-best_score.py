@@ -5,8 +5,8 @@ def best_score(a_dictionary):
     else:
         maxe = 0
         a = 0
-        for i in a_dictionary:
-            if a_dictionary[i] > maxe:
-                maxe = a_dictionary[i]
+        for i, j in a_dictionary.items():
+            if j > maxe:
+                maxe = j
                 a = i
     return a
