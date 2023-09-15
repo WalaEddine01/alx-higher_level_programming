@@ -8,4 +8,6 @@ def best_score(a_dictionary):
         if j > maxe:
             maxe = j
             a = i
+    if (a == 0):
+        return None
     return a
