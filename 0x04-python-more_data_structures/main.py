@@ -1,6 +1,17 @@
 #!/usr/bin/python3
-best_score = __import__('10-best_score').best_score
+roman_to_int = __import__('12-roman_to_int').roman_to_int
+roman_number = "X"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
-my_dict = { }
-best_key = best_score(my_dict)
-print("Best: {}".format(best_key))
+roman_number = "VII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "IX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "LXXXVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCCVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
