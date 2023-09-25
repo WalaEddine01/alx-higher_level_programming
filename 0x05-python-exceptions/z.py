@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 try:
-    raise TypeError  # This will raise a TypeError
+    4 + "j"
 except TypeError as te:
-    print("An error occurred:")
+    print("te")
