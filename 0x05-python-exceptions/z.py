@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 try:
-    4 + "j"
-except TypeError as te:
-    print("te")
+    print("{:d}".format("e"))
+except ValueError as te:
+    print(te)
