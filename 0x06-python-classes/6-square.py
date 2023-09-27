@@ -74,11 +74,6 @@ class Square:
 
         Return: Nothing
         """
-        if (type(self.__position) is not tuple or type(self.__position[0]) is not int
-                or type(self.__position[1]) is not int or len(self.__position) != 2
-                or self.__position[1] < 0 or self.__position[0] < 0):
-            raise TypeError("position must be a tuple of 2 positive integers")
-            return
         j = self.__size
         a = self.__position[1]
         if j == 0:
