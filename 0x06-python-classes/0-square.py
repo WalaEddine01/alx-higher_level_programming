@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-""" This moduale defines a empty class for working wit square
-"""
 
 
 class Square:
