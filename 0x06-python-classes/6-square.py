@@ -15,8 +15,6 @@ class Square:
     __position = (0, 0)
 
     def __init__(self, size=0, position=(0, 0)):
-        if (len(position) != 2):
-            raise IndexError("Index out of the range")
         if (type(size) is int):
             if size < 0:
                 raise ValueError("size must be >= 0")
@@ -24,6 +22,8 @@ class Square:
                 self.__size = size
         else:
             raise TypeError("size must be an integer")
+        if (len(position) != 2):
+            raise IndexError("Index out of the range")
         if (type(position) is not tuple or type(position[0]) is not int
                 or type(position[1]) is not int or len(position) != 2
                 or position[1] < 0 or position[0] < 0):
