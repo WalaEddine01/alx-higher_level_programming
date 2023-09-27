@@ -11,7 +11,7 @@ class Square:
     Attributes:
         __size: the length of the side of the square
     """
-    __size = None
+    __size = 0
 
     def __init__(self, size):
         self.__size = size
