@@ -1,2 +1,2 @@
-a = None
-b = None
+>>> print(add_integer(0, 2))
+2
