@@ -1,0 +1,19 @@
+For the 3-say_my_name modual
+-----------------------------
+using say_my_name function
+-------------------------
+import the function from the modual
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+>>> say_my_name("s", 3)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>> say_my_name(3, "e")
+Traceback (most recent call last): 
+...
+TypeError: first_name must be a string
+>>> say_my_name("wala", "eddine")
+My name is wala eddine
+>>> say_my_name("wala")
+My name is wala 
