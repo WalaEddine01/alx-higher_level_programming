@@ -1,2 +1,40 @@
->>> print(add_integer(0, 2))
+For the 0-add_integer modual
+-----------------------------
+using add_integer function
+-------------------------
+import the function
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+test cases:
+
+>>> add_integer(0, 2)
 2
+>>> add_integer(0)
+98
+>>> add_integer("3", 3)
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+    exec(compile(example.source, filename, "single",
+  File "<doctest 0-add_integer.txt[3]>", line 1, in <module>
+    add_integer("3", 3)
+  File "/home/vagrant/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 24, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+>>> add_integer(3, "3")
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+    exec(compile(example.source, filename, "single",
+  File "<doctest 0-add_integer.txt[3]>", line 1, in <module>
+    add_integer("3", 3)
+  File "/home/vagrant/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 26, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+>>> add_integer(0.4,0.2)
+0
+>>> add_integer(0.3)
+98
+>>> add_integer(100, 2.1)
+102
+>>> add_integer(-3, -3)
+-6

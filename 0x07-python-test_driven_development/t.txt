@@ -1,3 +1,0 @@
-    >>> from e import main
-    >>> main()
-    hello
