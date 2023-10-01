@@ -1,0 +1,35 @@
+For the 2-matrix_divided modual
+-----------------------------
+using matrix_divided function
+-------------------------
+import the function from the modual
+
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> matrix_divided(matrix, 2.2)
+[[0.45, 0.91, 1.36], [1.82, 2.27, 2.73]]
+>>> matrix_divided(matrix, "d")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> matrix = [[1, 2, 3], [4, 5, 6, 2]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must havethe same size
+>>> matrix = [1, 2, 3]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists)of integers/floats
+>>> matrix = [[1, 2, 3], [4, 5, "s"]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists)of integers/floats
