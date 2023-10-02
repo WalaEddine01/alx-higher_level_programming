@@ -38,10 +38,17 @@ def print_board(board, N):
 def main():
     import sys
 
+    if len(sys.argv) != 2:
+        print("Usage: nqueens N")
+        exit(1)
     try:
-        N = int(sys.argv)
+        N = int(sys.argv[1])
     except:
         print("N must be a number")
+        exit(1)
+    if N < 4:
+        print("N must be at least 4")
+        exit(1)
     board = [[0 for i in range(N)] for j in range(N)]
     if solve_n_queens(board, 0, N) is False:
         print("Solution does not exist")
