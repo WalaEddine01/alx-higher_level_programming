@@ -107,4 +107,19 @@ class Rectangle:
         """
         if self.__height == 0 or self.__width == 0:
             return 0
-        return (self.height + self.width) * 2
+        return (self.__height + self.__width) * 2
+
+    def __str__(self):
+        """
+        Generates a string representing of the rectangle.
+
+        Return:
+            str: A string with '#' characters representing the rectangle's
+            shape.
+        """
+        result = ""
+        for i in range(self.__height):
+            result += "#" * self.__width
+            if i != self.__height - 1:
+                result += "\n"
+        return result
