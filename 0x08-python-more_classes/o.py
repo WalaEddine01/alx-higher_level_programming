@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-Rectangle = __import__('3-rectangle').Rectangle
+class MyClass:
+    class_attribute = 10
 
-my_rectangle = Rectangle(9,9 )
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    def __init__(self, value):
+        self.instance_attribute = value
 
-print(str(my_rectangle))
-print(repr(my_rectangle))
+    @classmethod
+    def class_method(cls):
+        print(f"This is a class method. Class attribute: {cls.class_attribute}")
 
-print("--")
+# Calling a class method on the class itself
+MyClass.class_method()
 
-my_rectangle.width = 10
-my_rectangle.height = 3
-print(my_rectangle)
-print(repr(my_rectangle))
+# Creating an instance and calling the class method
+obj = MyClass(20)
+obj.class_method()
+
