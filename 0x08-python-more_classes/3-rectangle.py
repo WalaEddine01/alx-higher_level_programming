@@ -118,8 +118,9 @@ class Rectangle:
             shape.
         """
         result = ""
-        for i in range(self.__height):
-            result += "#" * self.__width
-            if i != self.__height - 1:
-                result += "\n"
+        if (self.__height and self.__width):
+            for i in range(self.__height):
+                result += "#" * self.__width
+                if i != self.__height - 1:
+                    result += "\n"
         return result
