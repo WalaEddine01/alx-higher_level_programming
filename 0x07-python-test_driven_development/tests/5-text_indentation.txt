@@ -1,0 +1,34 @@
+For the 5-text_indentation Modual
+-------------------------
+using text_indentation function
+-------------------------
+import the function
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+test cases:
+
+>>> text_indentation("wala")
+wala
+>>> text_indentation("wala. wala")
+wala.
+
+wala
+>>> text_indentation("wala. wala. wala")
+wala.
+
+wala.
+
+wala
+>>> text_indentation("wal.wala . c,dd?wala")
+wal.
+
+wala .
+
+c,dd?
+
+wala
+>>> text_indentation("wal:wal;wal")
+wal:
+
+wal;wal
