@@ -1,1 +1,1 @@
-__class__.__name__
+type
