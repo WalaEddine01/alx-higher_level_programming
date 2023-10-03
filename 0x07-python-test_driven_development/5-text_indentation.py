@@ -1,5 +1,19 @@
 #!/usr/bin/python3
+"""
+This modual contains text_indentation function
+"""
+
+
 def text_indentation(text):
+    """
+    This function prints a new line when char == '.' or ':' or '?'
+
+    Args:
+        text: the string input
+
+    Return:
+        the new string
+    """
     a = 0
     for i in range(len(text)):
         if text[i] in {".", "?", ":"}:
