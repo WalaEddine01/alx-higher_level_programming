@@ -5,6 +5,12 @@ This modual contains print_square function
 
 
 def print_square(size):
+    """
+    This function prints a square with "#"
+
+    Args:
+        size (int): the size of the square
+    """
     if type(size) is not int or type(size) is float and size < 0:
         raise TypeError("size must be an integer")
     if size < 0:
