@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""
+This is say_my_name modual contains ay_my_name function
+"""
 def say_my_name(first_name, last_name=""):
+    """
+    this is ay_my_name function prints My name is {first_name} {last_name}
+    message
+    """
     if type(first_name) is not str:
         raise TypeError("first_name must be a string")
     if type(last_name) is not str:
