@@ -12,23 +12,27 @@ test cases:
 wala
 >>> text_indentation("wala. wala")
 wala.
-
+<BLANKLINE>
 wala
 >>> text_indentation("wala. wala. wala")
 wala.
-
+<BLANKLINE>
 wala.
-
+<BLANKLINE>
 wala
 >>> text_indentation("wal.wala . c,dd?wala")
 wal.
-
+<BLANKLINE>
 wala .
-
+<BLANKLINE>
 c,dd?
-
+<BLANKLINE>
 wala
 >>> text_indentation("wal:wal;wal")
 wal:
-
+<BLANKLINE>
 wal;wal
+>>> text_indentation(2)
+Traceback (most recent call last):
+...
+TypeError: text must be a string

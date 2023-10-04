@@ -13,7 +13,12 @@ def text_indentation(text):
 
     Return:
         the new string
+
+    Raises:
+        TypeError: text must be a string
     """
+    if type(text) is not str:
+        raise TypeError("text must be a string")
     a = 0
     for i in range(len(text)):
         if text[i] in {".", "?", ":"}:
