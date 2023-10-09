@@ -26,3 +26,4 @@ ValueError: name must be greater than 0
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
+>>> bg.integer_validator("hello", 9)
