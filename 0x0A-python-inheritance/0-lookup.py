@@ -2,6 +2,8 @@
 """
 This Modual contains the lookup function
 """
+
+
 def lookup(obj):
     """
     This function returns the list of available attributes and methods of an
