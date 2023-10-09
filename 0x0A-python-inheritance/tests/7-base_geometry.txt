@@ -48,3 +48,13 @@ TypeError: integer_validator() takes 3 positional arguments but 4 were given
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
+>>> bg.__class__.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+>>> bg.integer_validator("", 4)
+>>> bg.integer_validator(None, 3)
+>>> bg.integer_validator("name", (3, 3))
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
