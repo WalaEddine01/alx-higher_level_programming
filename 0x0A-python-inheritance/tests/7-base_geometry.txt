@@ -58,3 +58,7 @@ TypeError: integer_validator() missing 3 required positional arguments: 'self', 
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
+>>> bg.integer_validator("name",  {3, 3})
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
