@@ -37,3 +37,6 @@ importing the modual
 Traceback (most recent call last):
 ...
 TypeError: '<' not supported between instances of 'int' and 'str'
+>>> my_list5 = MyList()
+>>> my_list5.print_sorted()
+[]
