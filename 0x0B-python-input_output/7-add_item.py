@@ -12,4 +12,4 @@ list_ = []
 for i in range(1, len(sys.argv)):
     list_.append(sys.argv[i])
 with open("add_item.json", encoding="utf-8", mode='w') as f:
-    json.dump(list_, f, indent=2)
+    json.dump(list_, f)
