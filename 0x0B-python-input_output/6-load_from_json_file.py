@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-import json
 """
 This modual contains the load_from_json_file function
 """
 
 
 def load_from_json_file(filename):
+    import json
     """
     function  creates an Object from a “JSON file”:
+
     Args:
         filename: the name of the file
     """
