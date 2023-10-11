@@ -2,6 +2,8 @@
 """
 This modual contains the calss_tojson function
 """
+from_json_string = __import__("4-from_json_string").from_json_string
+e = __import__("e").ab
 
 
 def class_to_json(obj):
@@ -11,6 +13,5 @@ def class_to_json(obj):
     Args:
         obj: the class obj
     """
-    import json
-    data = json.dumps(obj.__dict__)
-    return json.loads(data)
+    data = e(obj.__dict__)
+    return from_json_string(data)
