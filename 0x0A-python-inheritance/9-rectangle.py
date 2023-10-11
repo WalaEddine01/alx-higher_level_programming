@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This modual contains the BaseGeometry class
+This modual contains the Rectangle class
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
