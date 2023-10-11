@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-Rectangle = __import__('9-rectangle').Rectangle
 
-r = Rectangle(3, 5)
+Square = __import__('10-square').Square
 
-print(r)
-print(r.area())
+s = Square(13)
+
+print(s)
+print(s.area())
+
