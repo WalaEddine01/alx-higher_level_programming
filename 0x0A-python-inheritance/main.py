@@ -1,17 +1,22 @@
 #!/usr/bin/python3
-Rectangle = __import__('8-rectangle').Rectangle
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-r = Rectangle(3, 5)
+bg = BaseGeometry()
 
-print(r)
-print(dir(r))
+bg.integer_validator("my_int", 12)
+bg.integer_validator("width", 89)
 
 try:
-    print("Rectangle: {} - {}".format(r.width, r.height))
+    bg.integer_validator("name", "John")
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
 
 try:
-    r2 = Rectangle(3, True)
+    bg.integer_validator("age", 0)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    bg.integer_validator("distance", -4)
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
