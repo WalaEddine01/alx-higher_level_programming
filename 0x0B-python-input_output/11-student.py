@@ -26,10 +26,11 @@ class Student:
                 if hasattr(self, i):
                     dict_[i] = getattr(self, i)
         return dict_
+
     def reload_from_json(self, json):
         '''
         reload_from_json function that repalce all
         attributes of the Student
         '''
-        for key, value in json:
+        for key, value in json.items():
             setattr(self, key, value)
