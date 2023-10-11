@@ -12,6 +12,6 @@ except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
 
 try:
-    r2 = Rectangle(4, "ee")
+    r2 = Rectangle(3, True)
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
