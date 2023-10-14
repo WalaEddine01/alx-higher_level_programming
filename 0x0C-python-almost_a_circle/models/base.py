@@ -3,6 +3,7 @@
 This modual contains the Base class
 """
 import json
+import csv
 
 
 class Base:
@@ -41,3 +42,48 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """
+        This static method that returns the list of
+        the JSON string representation json_string
+        """
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        This method creats a new instance with all attr alredy set
+        """
+        new = cls(1, 1)
+        new.update(**dictionary)
+        return new
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        class method that returns a list of instances:
+        """
+        list2_ = []
+        name = cls.__name__ + ".json"
+        try:
+            with open(name, encoding="utf-8", mode="r") as f:
+                for i in cls.from_json_string(f.read()):
+                    list2_.append(cls.create(**i))
+                return list2_
+        except:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        if list_objs is not None:
+            list_objs = [i.to_dictionary() for i in list_objs]
+        name = cls.__name__ + ".json"
+        with open(name, "w", newline="") as f:
+            csv_wr = csv.writer(f)
+            csv_wr.writeterow(list_objs)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        with open(name, "r", newline="") as f:
+            csv_re = csv.reader(f)
+            for i in csv_re:
+                print(i)
