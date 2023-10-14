@@ -87,3 +87,6 @@ class Base:
             csv_re = csv.reader(f)
             for i in csv_re:
                 print(i)
+    
+    @staticmethod
+    def draw(list_rectangles, list_squares):
