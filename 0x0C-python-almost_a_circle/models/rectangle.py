@@ -147,11 +147,21 @@ class Rectangle(Base):
         this is the uptade function
         """
         if args:
-            print("-" * 20)
             for (attr, _), arg in zip(vars(self).items(), args):
                 if arg and attr:
                     setattr(self, attr, arg)
         else:
-            print("'" * 44)
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        This method returns a dictionary representation of a Rectangle
+        """
+        return {
+                "x": self.__x,
+                "y": self.__y,
+                "id": self.id,
+                "height": self.__height,
+                "width": self.__width,
+                }
