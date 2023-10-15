@@ -31,7 +31,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """
-        save_to_file hat writes the JSON string representation of
+        save_to_file that writes the JSON string representation of
         list_objs to a file
         """
         if list_objs is not None:
@@ -74,19 +74,35 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """
+        This method  writes the CSV string representation of
+        list_objs to a file
+        """
         if list_objs is not None:
             list_objs = [i.to_dictionary() for i in list_objs]
-        name = cls.__name__ + ".json"
+        name = cls.__name__ + ".csv"
         with open(name, "w", newline="") as f:
-            csv_wr = csv.writer(f)
-            csv_wr.writeterow(list_objs)
+            for obj in list_objs:
+                csv_string = ",".join(map(str, obj.to_dictionary().values())) + "\n"
+                f.write(csv_string)
 
     @classmethod
     def load_from_file_csv(cls):
-        with open(name, "r", newline="") as f:
-            csv_re = csv.reader(f)
-            for i in csv_re:
-                print(i)
-    
+        """
+        class method that returns a list of instances
+        """
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        list2_ = []
+        name = cls.__name__ + ".csv"
+        with open(name, encoding="utf-8", mode="r") as f:
+            reader = csv.DictReader(f)
+            for i in reader:
+                ins = cls.create(**i)
+                list2_.append(ins)
+            return list2_
+
     @staticmethod
     def draw(list_rectangles, list_squares):
+        pass
