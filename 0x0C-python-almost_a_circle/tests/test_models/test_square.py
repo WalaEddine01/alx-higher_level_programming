@@ -18,7 +18,7 @@ class TestSquare(unittest.TestCase):
         """
         Base._Base__nb_objects = 0
 
-    def test_A_class(self):
+    def test_cls(self):
         """
         Tests Square class type
         """

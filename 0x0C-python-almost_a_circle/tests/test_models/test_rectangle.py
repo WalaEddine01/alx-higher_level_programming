@@ -9,7 +9,7 @@ from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
 
-    def test_A_class(self):
+    def test_cls(self):
         """
         Tests Rectangle class type
         """

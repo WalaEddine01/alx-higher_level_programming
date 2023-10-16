@@ -10,7 +10,7 @@ from models.square import Square
 
 class TestBase(unittest.TestCase):
 
-    def test_id(self):
+    def test_id_method(self):
         """
         method to test the id method
         """
@@ -19,7 +19,7 @@ class TestBase(unittest.TestCase):
         o2 = Base()
         self.assertAlmostEqual(o2.id, 1)
 
-    def test_instantiation(self):
+    def test_inst(self):
         """
         Tests Base() instantiation
         """
@@ -28,7 +28,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b.__dict__, {"id": 2})
         self.assertEqual(b.id, 2)
 
-    def test_to_json_string(self):
+    def test_to_json_string_method(self):
         """
         Tests to_json_string() method
         """
@@ -48,23 +48,17 @@ required positional argument: 'list_dictionaries'")
         d = [{"foo": 9}]
         self.assertEqual(Base.to_json_string(d),
                          '[{"foo": 9}]')
-
         d = [{"foo": 8}, {"abc": 123}, {"hi": 0}]
         self.assertEqual(Base.to_json_string(d),
                          '[{"foo": 8}, {"abc": 123}, {"hi": 0}]')
-
         d = [{'x': 1, 'y': 2, 'width': 3, 'id': 4, 'height': 5},
              {'x': 11, 'y': 2, 'width': 31, 'id': 5,
              'height': 30}]
-        self.assertEqual(len(Base.to_json_string(d)),
-                         len(str(d)))
+        self.assertEqual(len(Base.to_json_string(d)), len(str(d)))
         d = [{}]
-        self.assertEqual(Base.to_json_string(d),
-                         '[{}]')
+        self.assertEqual(Base.to_json_string(d), '[{}]')
         d = [{}, {}]
-        self.assertEqual(Base.to_json_string(d),
-                         '[{}, {}]')
-
+        self.assertEqual(Base.to_json_string(d), '[{}, {}]')
         r1 = Rectangle(10, 7, 2, 8)
         dictionary = r1.to_dictionary()
         json_dictionary = Base.to_json_string([dictionary])
