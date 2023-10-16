@@ -69,7 +69,7 @@ class Base:
                 for i in cls.from_json_string(f.read()):
                     list2_.append(cls.create(**i))
                 return list2_
-        except:
+        except FileNotFoundError:
             return []
 
     @classmethod
@@ -82,9 +82,7 @@ class Base:
             list_objs = [i.to_dictionary() for i in list_objs]
         name = cls.__name__ + ".csv"
         with open(name, "w", newline="") as f:
-            for obj in list_objs:
-                csv_string = ",".join(map(str, obj.to_dictionary().values())) + "\n"
-                f.write(csv_string)
+            pass
 
     @classmethod
     def load_from_file_csv(cls):
