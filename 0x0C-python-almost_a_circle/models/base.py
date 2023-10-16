@@ -103,4 +103,21 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        pass
+        """
+        This is draw method
+        """
+        import turtle
+
+        turtle.bgcolor("black")
+        a = list_rectangles + list_squares
+        for i in a:
+            tu = turtle.Turtle()
+            tu.forward(i.width)
+            tu.left(90)
+            tu.forward(i.height)
+            tu.left(90)
+            tu.forward(i.width)
+            tu.forward(i.height)
+            tu.left(90)
+            tu.end_fill()
+        turtle.done()
