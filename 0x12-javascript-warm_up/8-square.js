@@ -4,7 +4,6 @@ if (isNaN(Number(argv[2]))) {
   console.log('Missing size');
 } else {
   let i = 0;
-  const j = 0;
   let x = '';
   while (i < Number(argv[2])) {
     let j = 0;
