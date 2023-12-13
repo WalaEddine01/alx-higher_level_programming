@@ -1,8 +1,4 @@
 #!/usr/bin/node
-const Rectangle = require('./2-rectangle');
+const esrever = require('./8-esrever').esrever;
 
-const r3 = new Rectangle();
-console.log(r3);
-console.log(r3.width);
-console.log(r3.height);
-
+console.log(esrever(["1", 2, { id: 3 }, 4, "5", 6]));
