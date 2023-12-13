@@ -1,14 +1,14 @@
 #!/usr/bin/node
-const Rectangle = require('./4-rectangle');
+const converter = require('./10-converter').converter;
 
-const r1 = new Rectangle(2, 3);
-console.log('Normal:');
-r1.print();
+let myConverter = converter(10);
 
-console.log('Double:');
-r1.double();
-r1.print();
+console.log(myConverter(2));
+console.log(myConverter(12));
+console.log(myConverter(89));
 
-console.log('Rotate:');
-r1.rotate();
-r1.print();
+myConverter = converter(16);
+
+console.log(myConverter(2));
+console.log(myConverter(12));
+console.log(myConverter(89));
