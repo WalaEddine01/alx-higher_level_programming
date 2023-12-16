@@ -20,8 +20,8 @@ if (__name__ == "__main__"):
         port=3306
     )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE name like\
-                '{}' ORDER BY id ASC".format(state_name))
+    cur.execute("SELECT * FROM states WHERE name like BINARY\
+                '{}' ORDER BY states.id ASC".format(state_name))
 
     for row in cur:
         print(row)
