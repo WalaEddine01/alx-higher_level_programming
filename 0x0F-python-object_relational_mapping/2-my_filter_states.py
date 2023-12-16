@@ -3,22 +3,28 @@
 this Module lists the states that matches with the user input
 """
 
-if __name__ == '__main__':
-    import MySQLdb as db
+if __name__ == "__main__":
+    import MySQLdb
     from sys import argv
-    """
-    Access to the database and get the states
-    from the database.
-    """
-    db_connect = db.connect(host="localhost", port=3306,
-                            user=argv[1], passwd=argv[2], db=argv[3])
-    db_cursor = db_connect.cursor()
 
-    db_cursor.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY \
-                        states.id ASC".format(argv[4]))
-    rows_selected = db_cursor.fetchall()
+    user = argv[1]
+    password = argv[2]
+    db_name = argv[3]
+    state_name = argv[4]
 
-    for row in rows_selected:
+    conn = MySQLdb.connect(
+        host="localhost",
+        user=user,
+        passwd=password,
+        db=db_name,
+        port=3306
+    )
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY\
+                '{}' ORDER BY states.id ASC".format(state_name))
+
+    rows = cur.fetchall()
+    for row in rows:
         print(row)
-    
+    cur.close()
+    conn.close()
