@@ -21,9 +21,10 @@ if __name__ == "__main__":
         port=3306
     )
     cur = conn.cursor()
-    cur.execute("SELECT name FROM cities WHERE state_id = name LIKE BINARY %s\
+    cur.execute("SELECT name FROM cities WHERE state_id = \
                 (SELECT id FROM states WHERE name LIKE BINARY %s)\
                 ORDER BY cities.id ASC", (state_name,))
+
     t = ()
     for row in cur:
         t += row
