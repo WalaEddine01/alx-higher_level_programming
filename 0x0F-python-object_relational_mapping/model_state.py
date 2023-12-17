@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from sqlalchemy import create_engine, ForeignKey, Column
 from sqlalchemy import CHAR, UniqueConstraint, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
