@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 This module contains the State class
+and apply some operations on it with sqlalchemy module
 """
 from sqlalchemy import create_engine, ForeignKey, Column
 from sqlalchemy import CHAR, UniqueConstraint, String, Integer
@@ -12,6 +13,9 @@ Base = declarative_base()
 
 
 class State(Base):
+    """
+    This is the State class
+    """
     __tablename__ = "states"
     id = Column("id", Integer, primary_key=True, nullable=False,
                 unique=True, autoincrement=True)
