@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module contains the State class
+"""
 from sqlalchemy import create_engine, ForeignKey, Column
 from sqlalchemy import CHAR, UniqueConstraint, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
@@ -15,7 +18,7 @@ class State(Base):
     name = Column("name", String(128), nullable=False)
 
 if __name__ == "__main__":
-    
+
     url = f"mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
     engine = create_engine(url=url, echo=True)
     Base.metadata.create_all(bind=engine)
