@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
- displays the value of the X-Request-Id.
+displays the value of the X-Request-Id.
 """
 import urllib.request
 from sys import argv
