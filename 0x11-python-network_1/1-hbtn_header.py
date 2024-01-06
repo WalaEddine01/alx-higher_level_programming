@@ -2,10 +2,10 @@
 """
  displays the value of the X-Request-Id.
 """
-from urllib import request
+import urllib.request
 from sys import argv
 
 url = argv[1]
-with request.urlopen(url) as request_:
+with urllib.request.urlopen(url) as request_:
     x_request_id = request_.getheader('X-Request-Id')
     print(f"{x_request_id}")
