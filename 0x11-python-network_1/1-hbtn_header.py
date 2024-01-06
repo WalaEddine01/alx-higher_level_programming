@@ -9,7 +9,6 @@ import urllib
 from sys import argv
 
 url = argv[1]
-req = request.Request(url)
-with request.urlopen(req) as request_:
+with request.urlopen(url) as request_:
     x_request_id = request_.getheader('X-Request-Id')
     print(f"{x_request_id}")
