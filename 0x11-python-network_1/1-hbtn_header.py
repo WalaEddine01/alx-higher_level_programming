@@ -5,7 +5,6 @@ and displays the value of the X-Request-Id variable found
 in the header of the response.
 """
 from urllib import request
-import urllib
 from sys import argv
 
 url = argv[1]
