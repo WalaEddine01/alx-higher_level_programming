@@ -2,19 +2,20 @@
 """
 Python script that list 10 commits
 """
-if __name__ == "__main__":
-    import requests
-    from sys import argv
+import sys
+import requests
 
-    url = f'https://api.github.com/repos/{argv[1]}/{argv[2]}/commits'
+
+if __name__ == "__main__":
+    url = "https://api.github.com/repos/{}/{}/commits".format(
+        sys.argv[2], sys.argv[1])
+
+    r = requests.get(url)
+    commits = r.json()
     try:
-        req = requests.get(url)
-    except requests.exceptions.ConnectionError as e:
-        print(e)
-    try:
-        commits = req.json()
-    except ValueError:
-        print("Not a valid JSON")
-    for commit in commits[:10]:
-        print(commit.get('sha'), end=': ')
-        print(commit.get('commit').get('author').get('name'))
+        for i in range(10):
+            print("{}: {}".format(
+                commits[i].get("sha"),
+                commits[i].get("commit").get("author").get("name")))
+    except IndexError:
+        pass
