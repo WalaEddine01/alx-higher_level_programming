@@ -7,7 +7,7 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    url = f'https://api.github.com/repos/{argv[1]}/{argv[2]}/commits'
+    url = f'https://api.github.com/repos/{argv[2]}/{argv[1]}/commits'
     req = requests.get(url)
     commits = req.json()
     try:
