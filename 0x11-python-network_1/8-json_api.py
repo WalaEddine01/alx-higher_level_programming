@@ -12,10 +12,11 @@ if __name__ == "__main__":
         req = requests.post(url, data={'q': argv[1]})
     except IndexError:
         req = requests.post(url, data={'q': ''})
-    data = req.json()
-    if not data:
-        print("No result")
-    elif 'id' in data and 'name' in data:
-        print(f"[{data['id']}] {data['name']}")
-    else:
+    try:
+        data = req.json()
+        if not data:
+            print("No result")
+        elif 'id' in data and 'name' in data:
+            print(f"[{data['id']}] {data['name']}")
+    except ValueError:
         print('Not a valid JSON')
