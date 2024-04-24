@@ -4,7 +4,6 @@
 <h4 align="left">The "alx-higher_level_programming" repository is a collection of projects and assignments focused on high-level programming in the Python and Ruby languages.</h4>
 
 ###
-
 <p align="left">python-exceptions</p>
 
 ###
